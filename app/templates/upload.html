@@ -1,0 +1,62 @@
+$def with (name)
+$:render.header(name)
+
+</div>
+
+<div class="main box">
+<link rel="stylesheet" href="$config.static/css/upload.css" type="text/css" media="screen" charset="utf-8" />
+<script src="$config.static/js/dust_func.js" type="text/javascript" charset="utf-8"></script>
+<script src="$config.static/js/jquery.html5_upload.js" type="text/javascript" charset="utf-8"></script>
+<script src="$config.static/js/upload.js" type="text/javascript" charset="utf-8"></script>
+	<h2>本地图片</h2>
+	<div class=" ui-widget-content ui-corner-all">
+			<div class="box">
+				<label>选择一张或多张图片
+				    <input type="file" multiple="multiple" id="pic-input" />
+				    <a href="javascript:void(0);" id="clear">clear</a>
+				</label>
+				<svg xmlns="http://www.w3.org/2000/svg" width="300" height="150" viewBox="-10 -10 410 210" id="dropbox">
+                    <path d="M 0 0 L 400 0 L 400 140 L 260 140 L 200 190 L 140 140 L 0 140 Z"/>
+                    &nbsp;&nbsp;<text x="50%" y="35%">或将图片拖到此处</text>
+                </svg>
+			</div>
+
+				<ul id="image-pic-list" class="pic-list">
+				</ul>
+
+				<div id="buttons-panel" class="ui-helper-clearfix clear">
+					<input id ="submit_button"  class="btn" type="submit" value="上传"/>
+					<div class="btn" id="progressbar"></div>
+					<div id="progress_report_name"></div>
+                    <div id="progress_report_status" style="font-style: italic;"></div>
+				</div>
+				<!-- 
+				<div>
+					<div id="logs">status: </div>
+				</div>
+			 -->
+	</div>
+	<h2>WEB图片</h2>
+	<div class=" ui-widget-content ui-corner-all">
+			<div class="box">
+				<label>图片url
+				    <input type="text" name="url" id="pic-url""/>
+				</label>
+			</div>
+			<input id ="grab_button"  class="btn" type="submit" value="抓取"/>
+			<div id="grab_result">
+			</div>
+			<div class = "clear"></div>
+	</div>
+
+<div>
+<br>
+<ul>
+<li>目前支持的文件大小 < 4Mb </li>
+<li>支持的文件类型：jpg|png|gif </li>
+</ul>
+</div>
+
+</div>
+
+$:render.foot()

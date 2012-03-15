@@ -1,0 +1,36 @@
+$def with (name)
+$:render.header(name)
+  <h2 class = "float_right green"><a href="/upload">Upload</a></h2>
+    </div>
+    <div class="clear"></div>
+    
+ 	<link rel="stylesheet" href="$config.static/css/images.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="$config.static/css/colorbox.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="$config.static/css/pager.css" type="text/css" media="screen" charset="utf-8">   
+    <script src="$config.static/js/jquery.pager.js" type="text/javascript" charset="utf-8"></script>
+	<script src="$config.static/js/gallery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="$config.static/js/jquery.colorbox-min.js" type="text/javascript" charset="utf-8"></script>
+	
+    <div id="head" class="ui-widget-content ui-corner-all box">
+		
+		<div>
+		    <!--    -->
+		   
+			<div id="radios1" class="button_box"></div>
+			<div id="radios2" class="button_box2"></div>
+			<div id="pager"></div>
+
+			<span id="rsp-status" style="color:red; font-size: 0.8em;"> </span>
+		</div>
+	</div>
+
+    <div class="main box">
+    
+    <ul id="image-list" class="pic-list">
+	</ul>
+    
+	<div class="clear">
+	</div>
+
+$:render.foot()
+
